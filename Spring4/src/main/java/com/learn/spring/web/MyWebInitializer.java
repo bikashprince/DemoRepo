@@ -6,11 +6,8 @@ import javax.servlet.ServletRegistration;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import com.learn.spring.config.SpringWebConfig;
 
@@ -39,7 +36,7 @@ import com.learn.spring.config.SpringWebConfig;
 
 public class MyWebInitializer implements WebApplicationInitializer {
 
-	 @Override
+	
 	    public void onStartup(ServletContext servletContext) throws ServletException {
 		 AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
 		 context.register(SpringWebConfig.class);
